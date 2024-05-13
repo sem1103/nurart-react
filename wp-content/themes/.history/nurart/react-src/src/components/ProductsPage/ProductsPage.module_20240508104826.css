@@ -1,0 +1,317 @@
+.products__page{
+    margin:  clamp(25px, 5vw, 56px) auto 0 auto;
+    & h1{
+        font: clamp(26px, 10vw, 44px) HelveticaB;
+        text-align: center;
+    }
+}
+
+.categoryes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: clamp(20px, 4vw, 45px) 0 clamp(18px, 4vw, 40px) 0 ;
+    & li{
+        
+        margin: 10px 20px 0 0;
+        &:last-child{
+            margin-right: 0;
+        }
+        & a{
+            font: clamp(14px, 3vw, 18px) HelveticaB;
+            text-shadow: none;
+            color: #1E1E1E;
+            border: 1px solid #000;
+            border-radius: 30px;
+            padding: 5px 20px;
+            min-width: 190px;
+            display: inline-block;
+            text-align: center;
+            &:hover{
+                background: var(--red);
+                color: #fff;
+                border-color: var(--red);
+            }
+        }
+    }
+}
+
+.filter__search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 clamp(10px, 3vw, 40px);
+    & #filter{
+        font: 14px HelveticaR;
+        color: #fff;
+        position: relative;
+        & .active__filter{
+            background: var(--gray);
+            padding: 12px 16px;
+            border-radius: 30px;
+            font: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            &::after{
+                content: '';
+                display: inline-block;
+                background: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.67969 0.00390625L7.5 0.824219L4 4.32422L0.5 0.824219L1.32031 0.00390625L4 2.68359L6.67969 0.00390625Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center/contain;
+                width: 13px;
+                height: 13px;
+                margin: 0 0 0 10px;
+                transition: all .3s ease-in-out;
+            }
+        }
+        & ul{
+            position: absolute;
+            border-radius: 20px;
+            min-width: max-content;
+            max-height: 0;
+            transition: all .3s ease-in-out;
+            top: calc(100% + 12px);
+            left: 0;
+            background: #fff;
+            overflow: hidden;
+            z-index: 100;
+            &::before{
+                content: 'Kateqoriya';
+                color: #848484;
+                margin: 0 0 12px 0;
+                display: inline-block;
+                font: 12px HelveticaR;
+            }
+            & button{
+                font: inherit;
+            }
+            & li{
+                margin: 0 0 12px 0;
+            }
+            & li:last-child {
+                margin: 0;
+            }
+
+            & p, & li, &::before{
+                opacity: 0;
+                transition: all .1s ease-in-out;
+            }
+        }
+
+        &.open__filter {
+            & ul {
+                max-height: 500px;
+                padding: 16px 32px 16px 16px;
+                border: 1px solid #b9b9b9;                
+            }
+            & p, & li,& ul::before{
+                opacity: 1;
+            }
+            & .active__filter::after{
+                transform: rotate(180deg);
+            }
+        }
+
+       
+    }
+}
+
+#search{
+    display: flex;
+    align-items: center;
+    padding: 7px ;
+    border-radius: 30px;
+    border: 2px solid var(--red);
+    background-color: #fff;
+    & input{
+        transition: all .3s ease-in-out;
+        border: 0;
+        outline: 0;
+        font: 14px HelveticaR;
+        color: #1E1E1E;
+    }
+    &::before{
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: 0 5px;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 -0.5 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.30524 15.7137C6.4404 14.8306 5.85381 13.7131 5.61824 12.4997C5.38072 11.2829 5.50269 10.0233 5.96924 8.87469C6.43181 7.73253 7.22153 6.75251 8.23924 6.05769C10.3041 4.64744 13.0224 4.64744 15.0872 6.05769C16.105 6.75251 16.8947 7.73253 17.3572 8.87469C17.8238 10.0233 17.9458 11.2829 17.7082 12.4997C17.4727 13.7131 16.8861 14.8306 16.0212 15.7137C14.8759 16.889 13.3044 17.5519 11.6632 17.5519C10.0221 17.5519 8.45059 16.889 7.30524 15.7137V15.7137Z' stroke='%23484848' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3Cpath d='M11.6702 7.20292C11.2583 7.24656 10.9598 7.61586 11.0034 8.02777C11.0471 8.43968 11.4164 8.73821 11.8283 8.69457L11.6702 7.20292ZM13.5216 9.69213C13.6831 10.0736 14.1232 10.2519 14.5047 10.0904C14.8861 9.92892 15.0644 9.4888 14.9029 9.10736L13.5216 9.69213ZM16.6421 15.0869C16.349 14.7943 15.8741 14.7947 15.5815 15.0879C15.2888 15.381 15.2893 15.8559 15.5824 16.1485L16.6421 15.0869ZM18.9704 19.5305C19.2636 19.8232 19.7384 19.8228 20.0311 19.5296C20.3237 19.2364 20.3233 18.7616 20.0301 18.4689L18.9704 19.5305ZM11.8283 8.69457C12.5508 8.61801 13.2384 9.02306 13.5216 9.69213L14.9029 9.10736C14.3622 7.83005 13.0496 7.05676 11.6702 7.20292L11.8283 8.69457ZM15.5824 16.1485L18.9704 19.5305L20.0301 18.4689L16.6421 15.0869L15.5824 16.1485Z' fill='%23484848'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") no-repeat center/contain;
+    }
+}
+
+.carts__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px;
+    gap: clamp(24px, 3vw, 38px);
+    margin: clamp(30px, 5vw, 60px) 0 0 0 ;
+    justify-content: space-between;
+    & > div{
+        position: relative;
+        display: flex;
+        flex-basis: calc((100% -  clamp(30px, 5vw, 60px) * 2) / 3);
+        flex-direction: column;
+        & .favorite__add{
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+        &:hover .favorite__add{
+            opacity: 1;
+        }
+       
+    }
+    & h3{
+        font: clamp(22px, 3vw, 26px) HelveticaB;
+        text-align: center;
+    }
+    & p{
+        font: clamp(14px, 3vw, 18px) HelveticaR;
+        text-align: center;
+        margin: 10px 0;
+    }    
+    & .cart__btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0 0 0;
+        & button{
+            font: 14px HelveticaR;
+            padding: 9px 16px;
+            border: 1px solid var(--red);
+            border-radius: 30px;
+            margin: 0 0 14px 14px;
+            color: #fff;
+            background-color: var(--red);
+            transition: all .3s ease-in-out;
+            &:hover{
+                box-shadow: 0 3px 5px  var(--gray);
+                transform: translateY(-2px);
+            }
+        }
+        & button:first-child{
+            margin: 0 0 14px 0;
+            color: var(--red);
+            background-color: #fff;
+        }
+    }
+}
+
+.polygraphy__carts{
+    
+    & img{
+        max-height: 200px;
+        border-radius: 30px;
+    }
+    & .cart__desc{
+        margin: clamp(18px, 4vw, 30px) 0 0 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        & p{
+            margin: 10px 0 auto 0;
+        }
+    }
+}
+
+
+
+/*-----STAMPS------*/
+
+.stamp__carts{
+    
+    & > div{
+        background: #fff;
+        border-radius: 40px;
+        border: 1px solid #ccc;
+        padding: 0 20px 20px 0;
+        overflow: hidden;
+    }
+    & h3{
+        font-size: clamp(16px, 3vw, 18px);
+    }
+    & .cart__name{
+        display: flex;
+        align-items: center;
+        background: #D9D9D9;
+        padding: 15px;
+        max-width: 270px;
+        border-radius: 0 0 60px 0;
+        & img{
+            max-width: 30px;
+            margin: 0 12px 0 0;
+        }
+        & p{
+            font-size: 14px;
+            margin: 5px 0 0 0;
+        }
+
+        
+    }
+
+    
+    & h5{
+            font: 10px HelveticaR;
+            margin: 10px  0;
+    }
+    .pillows{
+        margin: 0 0 15px 0;
+        & li{
+            display: flex;
+            align-items: center;
+            font: 12px HelveticaL;
+            & span{
+                flex: 1;
+            }
+            &::before{
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin: 0 5px 0 0;
+                background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z' fill='%2304b701'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")no-repeat center/contain;
+            }
+        }
+    }
+    & .prod__desc{
+        display: flex;
+        flex-direction: column;
+    }
+    & .product{
+        display: flex;
+        align-content: start;
+        & .prod__img{
+            max-width: 220px;
+            height: initial;
+            padding: 10px;
+        }
+
+        & .example{
+            max-width: 140px;
+            height: initial;
+            margin: auto 0 20px 0;
+        }
+        
+    }
+    & .have__box{
+        width: 100%;
+        height: initial;
+    }
+}
+
+
+@media only screen and (width < 900px) {
+    .carts__wrapper > div{
+        flex-basis: calc((100% -  clamp(30px, 5vw, 60px) * 1) / 2);
+
+    }
+}
+
+@media only screen and (width < 560px) {
+    .carts__wrapper > div{
+        flex-basis: 100&;
+    }
+}

@@ -1,0 +1,12 @@
+{ 
+    "products" : "Продукты",
+    "services" : "Услуги",
+    "design" : "Дизайн",
+    "digitPrint" : "Цифровая печать",
+    "ofsetPrint": "Офсетная печать",
+    "about" : "О нас",
+    "contact" : "Контакты",
+    "businessCard": "Визитки",
+    "booklet": "Буклеты",
+    "flayer": "Флайеры"
+}

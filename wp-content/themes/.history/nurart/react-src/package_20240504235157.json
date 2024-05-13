@@ -1,0 +1,46 @@
+{
+  "name": "nurart",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@devloco/react-scripts-wptheme": "3.4.1-wp.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-slick": "^0.30.2",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^14.1.1",
+    "react-int": "^0.3.3",
+    "react-intersection-observer": "^9.8.2",
+    "react-router-dom": "^6.22.3",
+    "i18next": "^23.11.2",
+    "i18next-browser-languagedetector": "^7.2.1"
+  },
+  "scripts": {
+    "crabuild": "react-scripts build",
+    "craeject": "react-scripts eject",
+    "crastart": "react-scripts start",
+    "cratest": "react-scripts test",
+    "build": "wptheme-scripts build",
+    "start": "wptheme-scripts start",
+    "wpbuild": "wptheme-scripts wpbuild",
+    "wpstart": "wptheme-scripts wpstart"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

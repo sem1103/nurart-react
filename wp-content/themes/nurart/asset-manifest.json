@@ -1,0 +1,22 @@
+{
+  "files": {
+    "static/js/0.chunk.js": "/wp-content/themes/nurart/static/js/0.chunk.js",
+    "static/js/0.chunk.js.map": "/wp-content/themes/nurart/static/js/0.chunk.js.map",
+    "main.css": "/wp-content/themes/nurart/static/css/main.chunk.css",
+    "main.js": "/wp-content/themes/nurart/static/js/main.chunk.js",
+    "main.css.map": "/wp-content/themes/nurart/static/css/main.chunk.css.map",
+    "main.js.map": "/wp-content/themes/nurart/static/js/main.chunk.js.map",
+    "runtime-main.js": "/wp-content/themes/nurart/static/js/bundle.js",
+    "runtime-main.js.map": "/wp-content/themes/nurart/static/js/bundle.js.map",
+    "index.php": "/wp-content/themes/nurart/index.php",
+    "static/media/App.css": "/wp-content/themes/nurart/static/media/Urbanist-Bold.277cb56f.ttf",
+    "static/media/Home.module.css": "/wp-content/themes/nurart/static/media/aboutBg.0908898a.png",
+    "static/media/About.module.css": "/wp-content/themes/nurart/static/media/aboutPage.769c6aba.png"
+  },
+  "entrypoints": [
+    "static/js/bundle.js",
+    "static/js/0.chunk.js",
+    "static/css/main.chunk.css",
+    "static/js/main.chunk.js"
+  ]
+}

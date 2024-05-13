@@ -1,0 +1,23 @@
+{
+    "products": "Məhsullar",
+    "services": "Xidmətlər",
+    "design": "Dizayn",
+    "digitPrint": "Rəqəmsal çap",
+    "ofsetPrint": "Ofset çap",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "businessCard": "Vizit kart",
+    "booklet": "Buklet",
+    "flayer": "Flayer",
+    "toCard": "Səbətə at",
+    "orderNow" : "Sifariş et",
+    "productPageTitle" : "Məhsullarımız",
+    "navPolygrafy" : "Poliqrafiya",
+    "navStamb" : "Möhür",
+    "navCart" : "Plastik Kartlar",
+    "navPromo" : "Promo Məhsullar",
+    "navVinil" : "Vinillər",
+    "stambId" : "Məhsul kodu",
+    "stambSize" : "Çap ölçüsü",
+    "changePillows": "Dəyişdirilə bilən yastıqlar"
+}

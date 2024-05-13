@@ -1,0 +1,20 @@
+{ 
+    "products" : "Продукты",
+    "services" : "Услуги",
+    "design" : "Дизайн",
+    "digitPrint" : "Цифровая печать",
+    "ofsetPrint": "Офсетная печать",
+    "about" : "О нас",
+    "contact" : "Контакты",
+    "businessCard": "Визитки",
+    "booklet": "Буклеты",
+    "flayer": "Флайеры",
+    "toCard": "В корзину",
+    "orderNow" : "Заказать",
+    "productPageTitle" : "Наши продукты",
+    "navPolygrafy" : "Полиграфия",
+    "navStamb" : "Печать",
+    "navCart" : "Пластиковые Карты",
+    "navPromo" : "Промо Продукты",
+    "navVinil" : "Винилы"
+}
